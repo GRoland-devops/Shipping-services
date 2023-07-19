@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ordenes-deployment
+  name: shpping-deployment
   labels:
-    app: ms-payments
+    app: shipping
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app-ordenes
+      app: shipping
   template:
     metadata:
       labels:
-        app: app-ordenes
+        app: shipping
     spec:
       containers:
         - name: ordenes
