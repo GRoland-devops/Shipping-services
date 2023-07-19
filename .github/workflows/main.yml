@@ -83,12 +83,12 @@ jobs:
            # sudo apt-get install -y kubectl
              #kubectl run orders --image=$RELEASE_IMAGE --port=8080 --image-pull-policy Always -l app=orders 
              kubectl apply -f kubernetes/pod.yml  -f kubernetes/services.yml -f kubernetes/networking.yml  
-          env:
-             KUBE_CONFIG_DATA: $KUBE_CONFIG
-             ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-             ECR_REPOSITORY: obligatorio
-             IMAGE_TAG: shipping_image
-             RELEASE_IMAGE: $ECR_REGISTRY/obligatorio:shipping_image
+          #env:
+          #   KUBE_CONFIG_DATA: $KUBE_CONFIG
+          #   ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          #   ECR_REPOSITORY: obligatorio
+          #   IMAGE_TAG: shipping_image
+          #   RELEASE_IMAGE: $ECR_REGISTRY/obligatorio:shipping_image
         
         #- name: Check Rolling Update
         #  run: 
