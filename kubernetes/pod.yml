@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shipping-deployment
+  name: ms-shipping-deployment
   labels:
     app: shipping
 spec:
@@ -15,7 +15,7 @@ spec:
         app: shipping
     spec:
       containers:
-        - name: ordenes
+        - name: shipping
           image: 612686574181.dkr.ecr.us-east-1.amazonaws.com/obligatorio:shipping_image
           
           ports:
