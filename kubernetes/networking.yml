@@ -13,21 +13,21 @@ spec:
               service:
                 name: orders-service
                 port:
-                  number: 80
+                  number: 8080
           - path: /payments
             pathType: Prefix
             backend:
               service:
                 name: payments-service
                 port:
-                  number: 80
+                  number: 8080
           - path: /shipping
             pathType: Prefix
             backend:
               service:
                 name: shipping-service
                 port:
-                  number: 80
+                  number: 8080
           - path: /products
             pathType: Prefix
             backend:
